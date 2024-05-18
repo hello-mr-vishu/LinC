@@ -1,0 +1,4 @@
+Field to put my JD
+Upload PDF
+PDF to image----->processing----> Google GeminiPro
+Prompts Template[Multiple Prompts]
