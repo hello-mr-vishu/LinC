@@ -11,6 +11,8 @@ from werkzeug.utils import secure_filename
 from pdf2image import convert_from_bytes
 import google.generativeai as genai
 from PIL import Image
+import PyPDF2 as pdf
+import json
 
 # Load environment variables
 load_dotenv()
@@ -104,21 +106,6 @@ def register():
             return redirect(url_for('login'))
 
     return render_template('register.html')
-
-@app.route('/part-time-jobs')
-def part_time_jobs():
-    # Render the part-time jobs page
-    return render_template('part-time-jobs.html')
-
-@app.route('/freelancing')
-def freelancing():
-    # Render the freelancing page
-    return render_template('freelancing.html')
-
-@app.route('/career-counseling')
-def career_counseling():
-    # Render the career counseling page
-    return render_template('career-counseling.html')
 
 @app.route('/evaluate', methods=['POST'])
 def evaluate():

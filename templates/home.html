@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Hom.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://kit.fontawesome.com/1572a930d7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container1">
+            <nav>
+                <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="Logo">
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li id="auth-button">
+                        {% if is_authenticated %}
+                            <a href="{{ url_for('logout') }}">Logout</a>
+                        {% else %}
+                            <a href="{{ url_for('login') }}">Login/Register</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+  
+ <!-- -------------services------------ -->
+
+ <div id="services">
+    <div class="container1">
+        <h1 class="sub-title">Explore Opportunities</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-briefcase"></i>
+                <h2>Part-Time Jobs</h2>
+                <p>Explore various part-time job opportunities that fit your schedule and help you gain valuable work experience while you study.</p>
+                <a href="/part-time-jobs">Apply now</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>Freelancing</h2>
+                <p>Find freelance projects that match your skills and interests, allowing you to work on your terms and build your portfolio.</p>
+                <a href="/freelancing">Start freelancing</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-user-tie"></i>
+                <h2>Career Counseling</h2>
+                <p>Get personalized career advice and guidance to help you navigate your career path, improve your resume, and prepare for interviews.</p>
+                <a href="/career-counseling">Get guidance</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- -------------contact------------ -->
+<div id="contact">
+    <div class="container1">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Us</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>22l31a5484@vignaniit.edu.in</p>
+                <p><i class="fa-solid fa-square-phone"></i>7702853524</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/vishnu-vardhan-36848a275/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/hello-mr-vishu"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://twitter.com/hello_mr_vishu"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/hello_mr.vishu/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.kaggle.com/vishnu80"><i class="fa-brands fa-kaggle"></i></a>
+                </div>
+                
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ATS -->
+    <div class="container">
+        <h2>ATS Tracking System</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <textarea name="input_text" id="input_text" rows="15" placeholder="Job Description" required></textarea><br><br>
+            <input type="file" name="file" id="file" accept=".pdf" required><br><br>
+            <button type="button" id="tellMeButton">Tell Me About the Resume</button>
+            <button type="button" id="percentageMatchButton">Percentage match</button>
+        </form>
+        <div id="responseContainer"></div>
+    </div>
+
+
+
+</body>
+</html>
