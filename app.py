@@ -1,9 +1,9 @@
-
-
 import os
 import base64
 import io
-from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify
+import openai
+import json
+from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify,send_file
 from dotenv import load_dotenv
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -11,12 +11,16 @@ from werkzeug.utils import secure_filename
 from pdf2image import convert_from_bytes
 import google.generativeai as genai
 from PIL import Image
+from flask import render_template_string
+
+
 
 # Load environment variables
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 app = Flask(__name__)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SECRET_KEY'] = 'your_secret_key'
 app.config['UPLOAD_FOLDER'] = 'uploads/'
@@ -42,7 +46,7 @@ def get_gemini_response(input, pdf_content, prompt):
     return response.text
 
 def input_pdf_setup(uploaded_file):
-    poppler_path = 'C:\\Program Files\\poppler-24.02.0\\Library\\bin'  # Ensure this is the correct path
+    poppler_path = 'C:\\Program Files\\poppler-24.02.0\\Library\\bin' 
     images = convert_from_bytes(uploaded_file.read(), poppler_path=poppler_path)
     first_page = images[0]
 
@@ -73,18 +77,19 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password, password):
             session['user_id'] = user.id
-            flash('Login successful!', 'success')
+            flash('     Login successful!', 'success')
             return redirect(url_for('home'))
         else:
-            flash('Invalid username or password.', 'danger')
+            flash('     Invalid username or password.', 'danger')
 
     return render_template('login.html')
 
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)
-    flash('You have been logged out.', 'success')
+    flash('       You have been logged out.', 'success')
     return redirect(url_for('home'))
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -107,18 +112,35 @@ def register():
 
 @app.route('/part-time-jobs')
 def part_time_jobs():
-    # Render the part-time jobs page
-    return render_template('part-time-jobs.html')
+    # Render the jobs page
+    return render_template('job-list.html')
+
+
+@app.route('/job-detail')
+def job_detail():
+    return render_template('job-detail.html')
+
+@app.route('/job-list')
+def job_list():
+    return render_template('job-list.html')
 
 @app.route('/freelancing')
 def freelancing():
     # Render the freelancing page
-    return render_template('freelancing.html')
+    return render_template('job-list.html')
 
 @app.route('/career-counseling')
 def career_counseling():
     # Render the career counseling page
     return render_template('career-counseling.html')
+
+@app.route('/ats')
+def ats():
+    return render_template('ats.html')
+
+@app.route('/resume')
+def resume():
+    return render_template('resume.html')
 
 @app.route('/evaluate', methods=['POST'])
 def evaluate():
@@ -158,6 +180,8 @@ def evaluate():
         return jsonify({"response": response})
 
     return jsonify({"error": "Error processing the file"}), 500
+
+
 
 if __name__ == '__main__':
     create_tables()

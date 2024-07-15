@@ -16,9 +16,9 @@
                 <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="Logo">
                 <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About</a></li> 
+                    <li><a href="#services">Explore</a></li>
+                    <li><a href="#tools">Tools</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li id="auth-button">
                         {% if is_authenticated %}
@@ -60,6 +60,45 @@
     </div>
 </div>
 
+<!-- ---------------------- Tools ------------------------------ -->
+
+<div id="tools">
+    <div class="container1">
+        <h1 class="sub-title">Tools & Resources</h1> 
+        <div class="work-list">
+            <!-- ATS System Tool -->
+            <div class="work">
+                <img src="/static/Images/ats.jpeg" alt="ATS System">
+                
+                <div class="layer">
+                    <h3>ATS System</h3>
+                    <p>Automate the resume screening process and match job descriptions with candidate profiles efficiently.</p>
+                    <a href="{{ url_for('ats') }}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="/static/Images/resumebuilder.jpeg" alt="Resume Builder">
+                <div class="layer">
+                    <h3>Resume Builder</h3>
+                    <p>Create professional resumes with ease using our intuitive resume builder tool.</p>
+                    <a href="{{ url_for('resume') }}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        
+            <div class="work">
+                <img src="/static/Images/jobtracking.jpeg" alt="Job Tracker">
+                <div class="layer">
+                    <h3>Job Tracker</h3>
+                    <p>Keep track of your job applications and follow up on them with our job tracker tool.</p>
+                    <a href="{{ url_for('ats') }}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+</div>
+
 
 <!-- -------------contact------------ -->
 <div id="contact">
@@ -90,21 +129,24 @@
         </div>
     </div>
 
-
-
-    <!-- ATS -->
-    <div class="container">
-        <h2>ATS Tracking System</h2>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <textarea name="input_text" id="input_text" rows="15" placeholder="Job Description" required></textarea><br><br>
-            <input type="file" name="file" id="file" accept=".pdf" required><br><br>
-            <button type="button" id="tellMeButton">Tell Me About the Resume</button>
-            <button type="button" id="percentageMatchButton">Percentage match</button>
-        </form>
-        <div id="responseContainer"></div>
-    </div>
-
-
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw-GUGjpFuzSZiMCTAUcmpx5X90zvVDzy_NaZd19pEqP8Iyi06VNdL8rs72nQyIufOuEA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg =document.getElementById("msg")
+    
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML =""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 
 </body>
 </html>

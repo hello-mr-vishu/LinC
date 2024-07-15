@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Tracking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ats.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container1">
+            <nav>
+                <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="Logo">
+                <ul id="sidemenu">
+                    <li><a href="{{ url_for('home') }}#home">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About </a></li>
+                    <li><a href="{{ url_for('home') }}#services">Explore</a></li>
+                    <li><a href="{{ url_for('home') }}#tools">Tools</a></li>
+                    <li><a href="{{ url_for('home') }}#contact">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- ATS -->
+    <div class="container">
+        <h2>ATS Tracking System</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <textarea name="input_text" id="input_text" rows="15" placeholder="Job Description" required></textarea><br><br>
+            <input type="file" name="file" id="file" accept=".pdf" required><br><br>
+            <button type="button" id="tellMeButton">Tell Me About the Resume</button>
+            <button type="button" id="percentageMatchButton">Percentage match</button>
+        </form>
+        <div id="responseContainer"></div>
+    </div>
+
+</body>
+</html>
