@@ -7,7 +7,7 @@ import webbrowser
 
 # Set Streamlit page configuration as the first command
 st.set_page_config(
-    page_title="GPT.4o Chat",
+    page_title="Bujji",
     page_icon="💬",
     layout="centered"
 )
