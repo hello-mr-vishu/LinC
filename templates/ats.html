@@ -15,7 +15,7 @@
                 <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="Logo">
                 <ul id="sidemenu">
                     <li><a href="{{ url_for('home') }}#home">Home</a></li>
-                    <li><a href="{{ url_for('home') }}#about">About </a></li>
+                    <li><a href="{{ url_for('streamlit_embed') }}">LinC Bot </a></li>
                     <li><a href="{{ url_for('home') }}#services">Explore</a></li>
                     <li><a href="{{ url_for('home') }}#tools">Tools</a></li>
                     <li><a href="{{ url_for('home') }}#contact">Contact</a></li>
@@ -28,7 +28,7 @@
 
     <!-- ATS -->
     <div class="container">
-        <h2>ATS Tracking System</h2>
+        <h2>Application Tracking System</h2>
         <form id="uploadForm" enctype="multipart/form-data">
             <textarea name="input_text" id="input_text" rows="15" placeholder="Job Description" required></textarea><br><br>
             <input type="file" name="file" id="file" accept=".pdf" required><br><br>

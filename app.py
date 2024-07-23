@@ -68,6 +68,8 @@ def home():
     is_authenticated = 'user_id' in session
     return render_template('home.html', is_authenticated=is_authenticated)
 
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -109,6 +111,11 @@ def register():
             return redirect(url_for('login'))
 
     return render_template('register.html')
+
+@app.route('/streamlit')
+def streamlit_embed():
+    return redirect("http://localhost:8501")
+
 
 @app.route('/part-time-jobs')
 def part_time_jobs():
@@ -157,21 +164,29 @@ def evaluate():
         if action == "Tell Me About the Resume":
             input_prompt = """
             You are an experienced Technical Human Resource Manager. Your task is to review the provided resume of a student against the provided job description from an organization looking to fill a part-time or freelance position.
-            Please provide a detailed evaluation of whether the student's profile aligns with the role specified in the job description.
-            Highlight the strengths and weaknesses of the student's resume in relation to the job requirements outlined by the organization.
-            Focus on the student's relevant skills, experience, educational background, and any projects or internships that demonstrate their suitability for the role.
-            Additionally, mention any notable achievements or certifications that enhance the student's profile.
-            Provide a clear and concise summary of how well the student's qualifications match the job description.
+        
+        First, display the student's name.
+        Second, list their skills.
+        Third, provide their educational background.
+        
+        Next, provide a detailed evaluation of whether the student's profile aligns with the role specified in the job description.
+        Highlight the strengths and weaknesses of the student's resume in relation to the job requirements outlined by the organization.
+        Focus on the student's relevant skills, experience, educational background, and any projects or internships that demonstrate their suitability for the role.
+        Additionally, mention any notable achievements or certifications that enhance the student's profile.
+        Provide a clear and concise summary of how well the student's qualifications match the job description.
             """
 
 
         elif action == "Percentage match":
             input_prompt = """
             You are a skilled ATS (Applicant Tracking System) scanner with a deep understanding of part-time and freelance job requirements.
-            Your task is to evaluate the student's resume against the provided job description from an organization. Calculate the percentage match of the resume to the job description.
-            Provide the match percentage first. Next, list any missing keywords or skills that are critical for the job.
-            Finally, offer your overall assessment of the student's fit for the role, highlighting their strengths and areas for improvement.
-            Your evaluation should help the student understand how closely their resume aligns with the job requirements and what they can improve.
+    Your task is to evaluate the student's resume against the provided job description from an organization. Calculate the percentage match of the resume to the job description.
+    
+    First, provide the match percentage.
+    Second, list any missing keywords or skills that are critical for the job.
+    Third, offer your overall assessment of the student's fit for the role, highlighting their strengths and areas for improvement.
+    
+    Your evaluation should help the student understand how closely their resume aligns with the job requirements and what they can improve.
             """
 
 
