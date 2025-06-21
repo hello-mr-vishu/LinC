@@ -1,8 +1,11 @@
 # 🚀 LinC: Opportunity Awaits
 
 ## Project Overview
+
 LinC is a comprehensive platform designed to bridge the gap between students and job opportunities. It offers an integrated suite of tools to enhance the job-seeking experience, including an Applicant Tracking System (ATS), a Resume Builder, and a Job Tracking feature. Leveraging advanced AI capabilities via Langchain, LinC provides real-time guidance and communication through a chat feature. The platform is built using Flask, HTML, JavaScript, and SQLite3, ensuring a robust and user-friendly experience.
 ---
+### Home Page
+![Home](Docs/Project%20Screenshots/Home.png)
 
 ## 📌 Table of Contents
 - [About the Project](#about-the-project)
@@ -53,18 +56,52 @@ Built using Python (Flask), HTML, CSS, JavaScript, and SQLite3, LinC ensures an 
 
 ## 🏗️ System Architecture
 
-![System Architecture](LinC1.png)
+![System Architecture](Docs/LinC1.png 21-06-2025 12_46_45.png)
+
+### Flowchart
+![Flowchart](Docs/Project%20Screenshots/Flowchart.png)
+
+### UML Diagram
+![UML Diagram](Docs/Project%20Screenshots/LinCUML.drawio.png)
 
 ---
+## 📸 Project Screenshots
 
-## ⚙️ Setup Instructions
-
-1. **Clone the Repository:**
-```bash
-git clone https://github.com/your-username/LinC.git
-cd LinC
+### Login Page
+![Login](Docs/Project%20Screenshots/Login.png)
 
 
+### Bhairava Page
+![Bhairava](Docs/Project%20Screenshots/Bhairava.png)
+
+### Chatbot Interface
+![Chatbot](Docs/Project%20Screenshots/Chatbot.png)
+
+### Flash Page
+![Flash](Docs/Project%20Screenshots/Flash%20(2).png)
+
+
+### Applicant Tracking System (ATS)
+![ATS](Docs/Project%20Screenshots/ATS.png)
+
+### Resume Analyser
+![Resume Analyser](Docs/Project%20Screenshots/ResueAnalyser.png)
+
+
+### Resume Generator
+![Resume Generator](Docs/Project%20Screenshots/ResumeGenerator.png)
+
+### Explore Page
+![Explore](Docs/Project%20Screenshots/Explore.png)
+
+### Tools Section
+![Tools](Docs/Project%20Screenshots/Tools.png)
+
+### Contact Page
+![Contact](Docs/Project%20Screenshots/Contact.png)
+
+
+---
 
 ### Abstract
 LinC aims to simplify the job search process for students and recent graduates by providing a fully integrated solution. It features an ATS for streamlined recruitment, a customizable Resume Builder, and a Job Tracking system. The AI-powered chat feature offers instant support, making it a game-changer in career management.
@@ -100,7 +137,7 @@ LinC aims to simplify the job search process for students and recent graduates b
 ## Installation and Setup
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/hello-mr-vishu/LinC.git
    ```
 2. Navigate to the project directory:
    ```bash
