@@ -2,7 +2,8 @@
 
 ## Project Overview
 
-LinC is a comprehensive platform designed to bridge the gap between students and job opportunities. It offers an integrated suite of tools to enhance the job-seeking experience, including an Applicant Tracking System (ATS), a Resume Builder, and a Job Tracking feature. Leveraging advanced AI capabilities via Langchain, LinC provides real-time guidance and communication through a chat feature. The platform is built using Flask, HTML, JavaScript, and SQLite3, ensuring a robust and user-friendly experience.
+LinC is a comprehensive platform designed to bridge the gap between students and job opportunities, offering an integrated suite of tools like an Applicant Tracking System (ATS), Resume Builder, and Job Tracking feature, all enhanced by advanced AI capabilities via Langchain for real-time guidance and communication through a chat feature, and built using Flask, HTML, JavaScript, and SQLite3 for a robust and user-friendly experience.
+
 ---
 ### Home Page
 ![Home](Docs/Project%20Screenshots/Home.png)
@@ -56,7 +57,7 @@ Built using Python (Flask), HTML, CSS, JavaScript, and SQLite3, LinC ensures an 
 
 ## 🏗️ System Architecture
 
-![System Architecture](Docs/LinC1.png 21-06-2025 12_46_45.png)
+<img src="Docs/21-06-2025%2012_46_45.png" alt="Project Diagram" width="600"/>
 
 ### Flowchart
 ![Flowchart](Docs/Project%20Screenshots/Flowchart.png)
@@ -65,40 +66,39 @@ Built using Python (Flask), HTML, CSS, JavaScript, and SQLite3, LinC ensures an 
 ![UML Diagram](Docs/Project%20Screenshots/LinCUML.drawio.png)
 
 ---
+
 ## 📸 Project Screenshots
 
 ### Login Page
-![Login](Docs/Project%20Screenshots/Login.png)
-
+<img src="Docs/Project%20Screenshots/Login.png" alt="Login" width="600"/>
 
 ### Bhairava Page
-![Bhairava](Docs/Project%20Screenshots/Bhairava.png)
+<img src="Docs/Project%20Screenshots/Bhairava.png" alt="Bhairava" width="600"/>
 
 ### Chatbot Interface
-![Chatbot](Docs/Project%20Screenshots/Chatbot.png)
+<img src="Docs/Project%20Screenshots/Chatbot.png" alt="Chatbot" width="600"/>
 
 ### Flash Page
-![Flash](Docs/Project%20Screenshots/Flash%20(2).png)
-
+<img src="Docs/Project%20Screenshots/Flash%20(2).png" alt="Flash" width="600"/>
 
 ### Applicant Tracking System (ATS)
-![ATS](Docs/Project%20Screenshots/ATS.png)
+<img src="Docs/Project%20Screenshots/ATS.png" alt="ATS" width="600"/>
 
 ### Resume Analyser
-![Resume Analyser](Docs/Project%20Screenshots/ResueAnalyser.png)
-
+<img src="Docs/Project%20Screenshots/ResueAnalyser.png" alt="Resume Analyser" width="600"/>
 
 ### Resume Generator
-![Resume Generator](Docs/Project%20Screenshots/ResumeGenerator.png)
+<img src="Docs/Project%20Screenshots/ResumeGenerator.png" alt="Resume Generator" width="600"/>
 
 ### Explore Page
-![Explore](Docs/Project%20Screenshots/Explore.png)
+<img src="Docs/Project%20Screenshots/Explore.png" alt="Explore" width="600"/>
 
 ### Tools Section
-![Tools](Docs/Project%20Screenshots/Tools.png)
+<img src="Docs/Project%20Screenshots/Tools.png" alt="Tools" width="600"/>
 
 ### Contact Page
-![Contact](Docs/Project%20Screenshots/Contact.png)
+<img src="Docs/Project%20Screenshots/Contact.png" alt="Contact" width="600"/>
+
 
 
 ---
