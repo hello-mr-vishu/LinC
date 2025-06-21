@@ -5,8 +5,8 @@
 LinC is a comprehensive platform designed to bridge the gap between students and job opportunities, offering an integrated suite of tools like an Applicant Tracking System (ATS), Resume Builder, and Job Tracking feature, all enhanced by advanced AI capabilities via Langchain for real-time guidance and communication through a chat feature, and built using Flask, HTML, JavaScript, and SQLite3 for a robust and user-friendly experience.
 
 ---
-### Home Page
-![Home](Docs/Project%20Screenshots/Home.png)
+## 🏗️ System Architecture
+![Project Diagram](Docs/LinC)
 
 ## 📌 Table of Contents
 - [About the Project](#about-the-project)
@@ -55,9 +55,6 @@ Built using Python (Flask), HTML, CSS, JavaScript, and SQLite3, LinC ensures an 
 
 ---
 
-## 🏗️ System Architecture
-
-<img src="Docs/LinC" alt="Project Diagram" width="600"/>
 
 ### UML Diagram
 ![UML Diagram](Docs/Project%20Screenshots/LinCUML.drawio.png)
@@ -65,6 +62,8 @@ Built using Python (Flask), HTML, CSS, JavaScript, and SQLite3, LinC ensures an 
 ---
 
 ## 📸 Project Screenshots
+### Home Page
+<img src="Docs/Project%20Screenshots/Home.png" alt="Project Diagram" width="600"/>
 
 ### Login Page
 <img src="Docs/Project%20Screenshots/Login.png" alt="Login" width="600"/>
