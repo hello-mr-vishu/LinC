@@ -4,3 +4,11 @@ qrcode[pil]
 
 openai==1.30.1
 streamlit==1.34.0
+Flask==2.3.3 # Or a more recent compatible version
+Flask-SQLAlchemy==3.0.3 # Or a more recent compatible version
+python-dotenv==1.0.0 # Or a more recent compatible version
+pdf2image==1.16.0 # Or a more recent compatible version
+Pillow==10.0.0 # Or a more recent compatible version (PIL is part of Pillow)
+openai==1.35.10 # Or a more recent compatible version
+google-generativeai==0.7.1 # Or a more recent compatible version
+Werkzeug==2.3.7 # Often a dependency of Flask, but good to explicitly include if you use its modules directly
