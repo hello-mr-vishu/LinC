@@ -59,9 +59,6 @@ Built using Python (Flask), HTML, CSS, JavaScript, and SQLite3, LinC ensures an 
 
 <img src="Docs/21-06-2025%2012_46_45.png" alt="Project Diagram" width="600"/>
 
-### Flowchart
-![Flowchart](Docs/Project%20Screenshots/Flowchart.png)
-
 ### UML Diagram
 ![UML Diagram](Docs/Project%20Screenshots/LinCUML.drawio.png)
 
@@ -76,7 +73,7 @@ Built using Python (Flask), HTML, CSS, JavaScript, and SQLite3, LinC ensures an 
 <img src="Docs/Project%20Screenshots/Bhairava.png" alt="Bhairava" width="600"/>
 
 ### Chatbot Interface
-<img src="Docs/Project%20Screenshots/Chatbot.png" alt="Chatbot" width="600"/>
+<img src="Docs/Project%20Screenshots/Chatbot.png" alt="Chatot" width="600"/>
 
 ### Flash Page
 <img src="Docs/Project%20Screenshots/Flash%20(2).png" alt="Flash" width="600"/>
