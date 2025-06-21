@@ -57,7 +57,7 @@ Built using Python (Flask), HTML, CSS, JavaScript, and SQLite3, LinC ensures an 
 
 ## 🏗️ System Architecture
 
-<img src="Docs/21-06-2025%2012_46_45.png" alt="Project Diagram" width="600"/>
+<img src="Docs/LinC" alt="Project Diagram" width="600"/>
 
 ### UML Diagram
 ![UML Diagram](Docs/Project%20Screenshots/LinCUML.drawio.png)
